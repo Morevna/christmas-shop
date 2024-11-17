@@ -1,17 +1,137 @@
 html {
     scroll-behavior: smooth;
-}
-* {
+  }
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-.body {
-    max-width: 1440px;
-    margin: 0px auto;
   }
-
   
-img {
+  .body {
+    width: 1440px;
+    margin: 0px auto;
+    font-family: "Montserrat Semi", serif;
+  }
+  
+  .bg-red {
+    background-color: #FF4646;
+    border-radius: 20px;
+  }
+  
+  img {
     max-width: 100%;
-}
+    border-radius: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  
+  /* fonts */
+  .caption-allura {
+    text-align: center;
+    color: var(--Static-White, #FFF);
+    font-family: Allura;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 24px */
+    letter-spacing: 1.2px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--Static-White, #FFF);
+    /* Header 1 */
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 48px */
+    letter-spacing: 5.76px;
+    text-transform: uppercase;
+  }
+  
+  h2,
+  h3 {
+    color: var(--Dark, #181C29);
+    /* Header 2 */
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 152%;
+    /* 36.48px */
+    letter-spacing: 3.84px;
+    text-transform: uppercase;
+  }
+  
+  button {
+    color: var(--Static-White, #FFF);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    /* 15.6px */
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    width: 234px;
+    height: 56px;
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+    border-radius: 20px;
+    background-color: var(--Dark, #181C29);
+    border: 0;
+    cursor: pointer;
+  }
+  
+  p {
+    color: var(--Dark, #181C29);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
+    /* 23.68px */
+  }
+  
+  
+  /* header */
+  .container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    /* 15.6px */
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 20px 102px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* nav */
+  .header-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    list-style-type: none;
+  }
+  
+  .burger-menu {
+    display: none;
+  }
