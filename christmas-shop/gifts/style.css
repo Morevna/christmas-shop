@@ -6,23 +6,19 @@ html {
     margin: 0;
     padding: 0;
   }
-  
   .body {
     width: 1440px;
     margin: 0px auto;
     font-family: "Montserrat Semi", serif;
   }
-  
   .bg-red {
     background-color: #FF4646;
     border-radius: 20px;
   }
-  
   img {
     max-width: 100%;
     border-radius: 20px;
   }
-  
   a {
     text-decoration: none;
   }
@@ -125,11 +121,13 @@ html {
   }
   
   /* nav */
+  ul {
+    list-style-type: none;
+  }
   .header-list {
     display: flex;
     flex-wrap: wrap;
     gap: 48px;
-    list-style-type: none;
   }
   
   .burger-menu {
