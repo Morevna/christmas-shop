@@ -279,10 +279,16 @@ p {
 }
 
 .card {
+  cursor: pointer;
   height: 342px;
   border-radius: 20px;
   background: var(--Content-Background, #ECF3F8);
 }
+
+.card:hover .subtitle-card {
+  color: var(--Primary, #FF4646);
+}
+
 
 .titles-cards {
   width: 100%;
