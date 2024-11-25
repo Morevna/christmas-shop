@@ -9,7 +9,7 @@ html {
 }
 
 .body {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0px auto;
   font-family: "Montserrat Semi", serif;
 }
@@ -17,7 +17,7 @@ html {
 .bg-red {
   background: url(../img/bg-garland.png) no-repeat;
   /* overflow-x: hidden; */
-  width: 1440px;
+  max-width: 1440px;
   background-color: #FF4646;
   border-radius: 20px;
   margin: 0px auto;
@@ -260,14 +260,14 @@ h1 {
 
 /* footer */
 .footer {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .top-footer {
   padding-top: 60px;
   margin: 0 auto;
-  width: 1270px;
+  max-width: 1270px;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
