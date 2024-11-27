@@ -236,7 +236,9 @@ p {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  color: var(--Dark, #181C29);
 }
+
 
 /* nav */
 .header-list {
@@ -244,6 +246,10 @@ p {
   flex-wrap: wrap;
   gap: 48px;
   list-style-type: none;
+}
+
+.header-item>a {
+  color: var(--Dark, #181C29);
 }
 
 /* Hero */
@@ -269,12 +275,12 @@ p {
   margin: 0 auto;
   border-radius: 20px;
   background: #FFF;
-  width: 1276px;
-  height: 528px;
+  max-width: 1276px;
+  max-height: 528px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 
 .left-about {
@@ -415,11 +421,12 @@ p {
 
 /* cta */
 .container-cta {
-  height: 668px;
+  height: 710px;
   padding-top: 221px;
+  padding-bottom: 0px;
   text-align: center;
   color: var(--Static-White, #FFF);
-  background: url(../img/bg-snow.png) center center/cover no-repeat, url(../img/bg-forest.png) center center/cover no-repeat;
+  background: url(../img/bg-snow.png) center center/cover no-repeat, url(../img/bg-forest.png);
   background-size: cover;
   /* background-position-x: bottom 100%; */
   display: flex;
@@ -429,6 +436,7 @@ p {
 }
 
 .timer {
+  margin-bottom: 0px;
   width: 344px;
   height: 72px;
   display: flex;
@@ -457,7 +465,7 @@ p {
 
 /* footer */
 .footer {
-  margin-top: 100px;
+  margin-top: 58px;
 }
 
 

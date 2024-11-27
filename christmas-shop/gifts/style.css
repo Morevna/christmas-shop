@@ -255,14 +255,19 @@ p {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  color: var(--Dark, #181C29);
 }
 
 /* nav */
 .header-list {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 48px;
   list-style-type: none;
+}
+
+.header-item>a {
+  color: var(--Dark, #181C29);
 }
 
 .gifts-link {
@@ -271,8 +276,7 @@ p {
   background: var(--Primary-10, rgba(255, 70, 70, 0.10));
   text-decoration: none;
   cursor: default;
-
-  color: var(--Primary, #FF4646);
+  color: var(--Primary, #FF4646) !important;
   /* Action Small */
   font-family: Montserrat;
   font-size: 12px;
