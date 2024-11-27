@@ -18,6 +18,17 @@
     display: none;
   }
 
+  .container-about {
+    margin: 0 auto;
+    border-radius: 20px;
+    background: #FFF;
+    max-width: 1276px;
+    max-height: 528px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   .top-footer {
     margin: 0 auto;
@@ -69,8 +80,6 @@
   .burger-menu._active {
     transform: rotate(90deg);
   }
-
-
 
 
   /* footer */
@@ -266,12 +275,12 @@ p {
 
 /* About */
 .about {
+  background: url(../img/bg-snow.png) center center/cover no-repeat;
+  background-size: cover;
   padding-top: 60px;
 }
 
 .container-about {
-  background: url(../img/bg-snow.png) center center/cover no-repeat;
-  background-size: cover;
   margin: 0 auto;
   border-radius: 20px;
   background: #FFF;
@@ -373,7 +382,7 @@ p {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0px 12px;
+  gap: 12px 12px;
   justify-content: center;
   padding: 20px 0px 20px 0px;
 }
@@ -426,7 +435,7 @@ p {
   padding-bottom: 0px;
   text-align: center;
   color: var(--Static-White, #FFF);
-  background: url(../img/bg-snow.png) center center/cover no-repeat, url(../img/bg-forest.png);
+  background: url(../img/bg-snow.png) center, url(../img/bg-forest.png) center;
   background-size: cover;
   /* background-position-x: bottom 100%; */
   display: flex;
