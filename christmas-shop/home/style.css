@@ -428,6 +428,14 @@ p {
   letter-spacing: 1.28px;
 }
 
+.for-harmony {
+  color: var(--Tag-Pink, #FF43F7);
+}
+
+.for-health {
+  color: var(--Tag-Green, #06A44F);
+}
+
 /* cta */
 .container-cta {
   height: 710px;

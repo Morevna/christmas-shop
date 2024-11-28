@@ -126,6 +126,7 @@ html {
 
 .bg-red {
   background: url(../img/bg-garland.png) no-repeat;
+  background-size: contain;
   /* overflow-x: hidden; */
   max-width: 1440px;
   background-color: #FF4646;
@@ -247,7 +248,7 @@ p {
   /* 15.6px */
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  padding: 20px 330px;
+  padding: 20px 102px;
 }
 
 .logo {
@@ -318,6 +319,19 @@ h1 {
   justify-content: center;
 }
 
+.gifts-item>a {
+  color: var(--Static-White, #FFF);
+}
+
+.all-link {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--Static-White-20, rgba(255, 255, 255, 0.20));
+  cursor: default;
+}
+
+/* cards */
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -354,6 +368,14 @@ h1 {
   /* 15.6px */
   letter-spacing: 0.6px;
   text-transform: uppercase;
+}
+
+.for-harmony {
+  color: var(--Tag-Pink, #FF43F7);
+}
+
+.for-health {
+  color: var(--Tag-Green, #06A44F);
 }
 
 .subtitle-card {
