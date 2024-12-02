@@ -1,28 +1,34 @@
-          // Открытие и закрытие бургер-меню на страницах шириной 768 пикселей и меньше.
-// При ширине страницы 768 пикселей и меньше панель навигации скрывается и появляется значок бургера: +2
-// При нажатии на значок бургера, меню бургера выезжает справа, а значок бургера плавно трансформируется в крест: +2
-// Меню бургеров занимает всю доступную область экрана под <header>блоком: +2
-// При нажатии на крестик, меню бургера плавно скрывается, перемещаясь в правую часть экрана, а крестик плавно трансформируется в иконку бургера: +2
-// Значок бургера создан с помощью HTML и CSS без использования images/svg: +2
-// Ссылки в меню бургера работают, обеспечивая плавный переход к точкам привязки: +2
+          // Открытие и закрытие бургер-меню на страницах шириной 768 пикселей и меньше. +14
 // При нажатии на любую ссылку (интерактивную или неинтерактивную) в меню, меню бургера скрывается, а крестик трансформируется в значок бургера: +2
 // При нажатии на любую ссылку (интерактивную или неинтерактивную) в меню, бургер-меню плавно скрывается вправо, а крестик плавно трансформируется в значок бургера, если пользователь остается на той же странице: +2
 // Размещение и размеры элементов в бургер-меню соответствуют макету (горизонтальное и вертикальное центрирование пунктов меню): +2
-// Страница за открытым меню не прокручивается: +2
-// Когда ширина страницы увеличивается до более чем 768 пикселей, значок бургера и открытое меню бургера скрываются, и появляется панель навигации: +2
+
+// функция - запрета и разрешения скролла
+const scrollControll = {
+	impossibleScroll() {
+	  document.body.style.cssText = `overflow: hidden;`;
+	},
+	possibleScroll() {
+	  document.body.style.cssText = '';
+	},
+  };
 
 
 
 const burgerMenu = document.querySelector('.burger-menu');
 const navMenu = document.querySelector('.nav-menu');
+
 if (burgerMenu) {
   burgerMenu.addEventListener("click", function (e) {
     burgerMenu.classList.toggle('_active');
-    // document.body.classList.toggle('_lock')
-    // navMenu.classList.toggle('_active');
-    // document.getElementById('blackout').classList.toggle('blackout');
+    navMenu.classList.toggle('_active');
   });
 }
+
+// вызовы функций по клику на burger-menu:
+document.querySelectorAll('.burger-menu').forEach(function(el) {      // перебираю burger-menu:                         // проявляю попап 
+  el.addEventListener('click', scrollControll.impossibleScroll);   // и запрещаю скролл
+});
 
 
 
@@ -35,71 +41,29 @@ if (burgerMenu) {
 
 
 
-          // Модальное окно для выбранного продукта.
-// Модальное окно с описанием конкретного подарка открывается при нажатии на любую часть карточки подарка: +4
+          // Модальное окно для выбранного продукта. +12
+
 // Описание и суперспособности в модальном окне соответствуют выбранному дару: +4
-// Часть страницы за пределами модального окна затемнена: +2
-// Когда модальное окно открыто, вертикальная прокрутка страницы становится неактивной; при закрытии она снова становится активной: +4
 // Нажатие на область вокруг модального окна и кнопки «Закрыть» закрывает его: +2
-// Модальное окно центрировано по обеим осям, размеры модальных элементов и их расположение соответствуют дизайну: +2
 
-
-
-// при клике на popupOpen (.card) 
-//  должен добавляться класс .open (к .pop-up-with-shadow.open), 
-// и должен добавляться класс .scroll-block (к body.scroll-block)
-
-// при клике на popupClose (класс .pop-up-close есть: у крестика и на затемн. области) 
-//  должен исчезать класс .open (у .pop-up-with-shadow.open), 
-// и должен исчезать класс .scroll-block (у body.scroll-block)
-const card = document.querySelectorAll('.card');
-
-const popupCloseBtn = document.querySelector('.pop-up-close-button');
 const popUp = document.querySelector('.pop-up-with-shadow');
-// функция запрета и разрешения скролла
-const scrollControll = {
-	impossibleScroll() {
-	  document.body.style.cssText = `overflow: hidden;`;
-	},
-	possibleScroll() {
-	  document.body.style.cssText = '';
-	},
-  };
-// функция закрытия попапа по клику на кнопку
-// (как оно заработало, я до конца ещё не разобрала)
 
-const popupClose = event => {
-	const target = event.target;
 
-	if (target === popupCloseBtn) {
-		popUp.style.opacity = 0;
-		popUp.style.visibility = 'hidden';
-	}
-} 
 
-// стили для видимости попапа
+// функция - стили для видимости попапа
 const popupOpen = () => {
 	popUp.style.opacity = 1;
 	popUp.style.visibility = 'visible';
 	popUp.style.cursor = 'pointer';
 }; 
 
-     // по клику на card:
-document.querySelectorAll('.card').forEach(function(el) {
-  // проявляю попап 
-  el.addEventListener('click', popupOpen);
 
-  // запрещаю скролл
-  el.addEventListener('click', scrollControll.impossibleScroll);
+// вызовы функций по клику на card:
+document.querySelectorAll('.card').forEach(function(el) {      // перебираю card:
+  el.addEventListener('click', popupOpen);                          // проявляю попап 
+  el.addEventListener('click', scrollControll.impossibleScroll);   // и запрещаю скролл
 });
-
-
-
-// закрытие попапа:
-// по клику на кнопку-крестик
-popUp.addEventListener('click', popupClose);
-// по клику на область вокруг
-
+// закрытие происходит через крестик-ссылку (перезагруз). не правильно, но надеюсь, вернусь ещё к этому
 
 [
   {
