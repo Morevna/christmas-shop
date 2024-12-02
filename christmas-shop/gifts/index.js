@@ -35,6 +35,32 @@ document.querySelectorAll('.burger-menu').forEach(function(el) {      // пер�
 
 // Переключение категорий подарков на giftsстранице.
 // Кнопка ВВЕРХ на giftsстранице.
+const btnUp = document.querySelector('.arrow-up-btn');
+
+// функция перемещения вверх
+const jumpUp = () => {
+  document.documentElement.scrollTop = 0;
+};
+// её вызов по клику на кнопку
+btnUp.addEventListener('click', jumpUp)
+
+
+// функция исчезновения и появления кнопки на уровне 300px
+function scrollUpDown() {
+  if (document.documentElement.scrollTop > 300) {
+    btnUp.style.opacity = 1;
+    btnUp.style.visibility = 'visible';
+    btnUp.style.cursor = 'pointer';
+  } else {
+    btnUp.style.opacity = 0;
+    btnUp.style.visibility = 'hidden';
+    btnUp.style.cursor = 'defolt';
+  }
+}
+// вызов этой функции при скролле
+window.onscroll = function () {
+  scrollUpDown()
+};
 
 
 
